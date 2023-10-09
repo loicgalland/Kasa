@@ -1,0 +1,233 @@
+.banner {
+  margin: 0 100px;
+  border-radius: 25px;
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+.banner .banner__title {
+  position: relative;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  color: #fff;
+  font-size: 48px;
+  text-align: center;
+  z-index: 1;
+}
+.banner img {
+  transform: translateY(-40%);
+  width: 100%;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+.card {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #fff;
+  background: linear-gradient(180deg, #fff 0%, #000 100%);
+}
+.card .card__img {
+  opacity: 0.7;
+  width: 340px;
+  height: 340px;
+}
+.card .card__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.error__container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 139px;
+  color: #FF6060;
+  margin-bottom: 139px;
+}
+.error__container .error__title {
+  font-size: 288px;
+  font-weight: 700;
+}
+.error__container .error__description {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 66px 0 29px 0;
+  margin-top: 50px;
+}
+footer .footer__text {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 100px 50px 100px;
+}
+nav ul {
+  padding: 0;
+}
+
+.home__container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.home__container .cards__container {
+  border-radius: 25px;
+  display: flex;
+  background-color: #F6F6F6;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 56px 50px;
+  margin: 0 100px;
+}
+
+.collapse__container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0px;
+}
+.collapse__container .collapse {
+  width: 1023px;
+  display: grid;
+}
+.collapse__container .collapse .collapse__header {
+  background-color: #FF6060;
+  padding: 10px 20px 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.collapse__container .collapse .collapse__header .collapse__title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+.collapse__container .collapse .collapse__header .collapse__open--btn {
+  background-color: inherit;
+  border: 0;
+}
+.collapse__container .collapse .collapse__header .animate {
+  animation: rotateBtn 100ms ease-in-out both alternate;
+}
+.collapse__container .collapse .collapse__body {
+  transform: scaleY(0);
+  visibility: hidden;
+  max-height: 0;
+  transform-origin: top;
+  overflow: hidden;
+  background-color: #F6F6F6;
+  border-radius: 0px 0px 5px 5px;
+}
+.collapse__container .collapse .collapse__body .collapse__description {
+  margin: 20px 20px 10px 15px;
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 400;
+}
+.collapse__container .open-background {
+  animation: openCollapse 300ms ease-in-out both;
+}
+.collapse__container .open-text {
+  animation: showTextCollapse 300ms ease-in-out both;
+}
+
+@keyframes showTextCollapse {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes rotateBtn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+@keyframes openCollapse {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+    visibility: visible;
+    max-height: 500px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .banner {
+    margin: 15px;
+    height: 111px;
+  }
+  .banner .banner__title {
+    margin-left: 16px;
+    font-size: 24px;
+    text-align: left;
+  }
+  footer .footer__text {
+    margin-top: 10px;
+    display: block;
+  }
+  footer .footer__text p {
+    margin: 0;
+  }
+  nav {
+    align-items: center;
+    margin: 15px;
+  }
+  nav .navbar__img {
+    height: 48px;
+  }
+  .home__container .cards__container {
+    background-color: #fff;
+    padding: 0;
+    margin: 0 15px;
+  }
+  .collapse__container {
+    margin: 20px 19px;
+  }
+  .collapse__container .collapse .collapse__header {
+    margin: 0 10px;
+    padding: 10px;
+  }
+  .collapse__container .collapse .collapse__header .collapse__title {
+    font-size: 13px;
+  }
+  .collapse__container .collapse .collapse__header .collapse__open--btn img {
+    height: 15px;
+  }
+  .collapse__container .collapse .collapse__body {
+    margin: 0 10px;
+  }
+  .collapse__container .collapse .collapse__body .collapse__description {
+    margin: 19px 20px;
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

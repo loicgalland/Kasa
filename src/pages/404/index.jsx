@@ -1,4 +1,4 @@
-import './style.css'
+import '../../utils/styles/style.css'
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../../utils/styles/colors";

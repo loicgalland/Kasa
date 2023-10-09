@@ -1,10 +1,11 @@
-import './style.css'
-import BannerImg from '../../assets/images/Banner/BannerImg.png'
-export default function Banner(){
+import '../../utils/styles/style.css'
+import React from "react";
+
+export default function Banner({ cover, title }){
     return(
         <div className="banner">
-            <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
-            <img src={BannerImg} alt="Paysage côtier"/>
+            <h1 className="banner__title">{title}</h1>
+            <img src={cover} alt="Paysage côtier"/>
         </div>
     )
 }

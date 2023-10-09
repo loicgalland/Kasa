@@ -1,4 +1,4 @@
-import './style.css'
+import '../../utils/styles/style.css'
 import {Link} from "react-router-dom";
 
 export default function Card({title, imageSrc, idWeWant}){

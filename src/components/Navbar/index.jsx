@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from '../../assets/images/LOGO.svg'
-import './style.css'
+import '../../utils/styles/style.css'
 import styled from "styled-components";
 import colors from "../../utils/styles/colors";
 
@@ -11,9 +11,6 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 24px;
   &:hover{
-    text-decoration: underline;
-  }
-  &:focus{
     text-decoration: underline;
   }
   @media screen and (max-width: 375px){

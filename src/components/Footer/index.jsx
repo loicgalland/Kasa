@@ -1,6 +1,5 @@
-import colors from "../../utils/styles/colors";
 import LogoWhite from '../../assets/images/LOGO-white.svg'
-import './style.css'
+import '../../utils/styles/style.css'
 export default function Footer(){
     return(
         <footer>

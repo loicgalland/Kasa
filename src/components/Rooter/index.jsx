@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../../pages/Home";
 import Propos from "../../pages/Apropos";
 import Hotel from "../../pages/Hotels";
-import Error from "../Error";
+import Error from "../../pages/404";
 
 
 function Rooter() {
