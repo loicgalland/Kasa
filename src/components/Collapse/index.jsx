@@ -13,17 +13,15 @@ export default function Collapse({title, description,}){
         setIsOpen(!isOpen)
     };
     return(
-        <div className="collapse__container">
-            <div className="collapse">
-                <div className="collapse__header">
-                    <span className="collapse__title">{title}</span>
-                    <button className={`collapse__open--btn ${isRotate ? 'animate' : ''}`} onClick={openCollapse}>
-                        <img src={NavigationIcon} alt=""/>
-                    </button>
-                </div>
-                <div className={`collapse__body ${isOpen ? 'open-background': ''}`}>
-                    <p className={`collapse__description ${isOpen ? 'open-text': ''}`}>{description}</p>
-                </div>
+        <div className="collapse">
+            <div className="collapse__header">
+                <span className="collapse__title">{title}</span>
+                <button className={`collapse__open--btn ${isRotate ? 'animate' : ''}`} onClick={openCollapse}>
+                    <img src={NavigationIcon} alt=""/>
+                </button>
+            </div>
+            <div className={`collapse__body ${isOpen ? 'open-background': ''}`}>
+                <p className={`collapse__description ${isOpen ? 'open-text': ''}`}>{description}</p>
             </div>
         </div>
     )
