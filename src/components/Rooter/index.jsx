@@ -11,7 +11,7 @@ function Rooter() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/apropos" element={<Propos />}/>
-        <Route path="/hotel/:id" element={<Hotel />}/>
+        <Route path="/hotel/:idHotel" element={<Hotel />}/>
         <Route path="*" element={<Error />}/>
       </Routes>
     </div>
