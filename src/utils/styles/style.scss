@@ -133,30 +133,153 @@ nav{
     }
 
     .btn-open-collapse--rotate {
-      transform: rotate(180deg);
+      transform: rotate(-180deg);
     }
   }
   .collapse__description {
     max-height: 0;
-    padding: 0 20px;
+    line-height: 142%;
     overflow: hidden;
-    transition: max-height 300ms ease-in-out;
-    p{
+    transition: max-height 400ms ease-in-out;
+    div{
+      margin: 20px 20px;
       color: $main-color;
       font-size: 18px;
       transform: translateY(-50px);
       transition: transform 400ms ease-in-out;
+      ul{
+
+        padding: 0;
+        list-style: none;
+        font-size: 18px;
+      }
     }
   }
   .collapse__description--open {
     max-height: 500px;
-    p{
+    div{
+
       transform: translateY(0);
+    }
+  }
+}
+.hotel__container{
+  margin: 0 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .hotel__description{
+    display: flex;
+    justify-content: space-between;
+    .hotel__description--left{
+      .hotel__title{
+        font-size: 36px;
+        color: $main-color;
+        font-weight: 500;
+        margin: 0;
+      }
+      .hotel__location{
+        font-size: 18px;
+        font-weight: 500;
+        color: $main-color;
+        margin: 0;
+      }
+      .tags__container{
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        .tag{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: $main-color;
+          color: $white;
+          font-size: 14px;
+          border-radius: 10px;
+          width: 150px;
+          height: 25px;
+        }
+      }
+    }
+    .hotel__description--rigth{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 21px;
+      .ratings{
+        display: flex;
+        gap: 10px;
+        font-size: 20px;
+        color: $grey;
+        .fa-orange{
+          color: $main-color;
+        }
+      }
+      .name-picture{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 10px;
+      }
+      .host--name{
+        color: $main-color;
+        font-size: 18px;
+      }
+      .host--picture{
+        height: 64px;
+        border-radius: 32px;
+      }
+    }
+  }
+  .hotel__collapse{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 76px;
+  }
+}
+.carousel{
+  width: 100%;
+  height: 415px;
+  margin: 0 auto;
+  .slider{
+    height: 100%;
+    position: relative;
+    .previous-icon{
+      z-index: 2;
+      position: absolute;
+      top: 50%;
+      transform: rotate(-90deg) translateX(50%);
+      cursor: pointer;
+      img{
+        height: 80px;
+      }
+    }
+    .next-icon{
+      z-index: 2;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: rotate(90deg) translateX(-50%);
+      cursor: pointer;
+      img{
+        height: 80px;
+      }
+    }
+    .number{
+      position: absolute;
+      left: 50%;
+      right: 50%;
+      bottom: 24px;
+      color: $white;
+      font-size: 18px;
     }
   }
 }
 footer{
   background-color: $black;
+  width: 100%;
   color: $white;
   text-align: center;
   padding: 66px 0 29px 0;
@@ -169,7 +292,7 @@ footer{
 }
 @media screen and (max-width: 375px){
   .banner{
-    margin: 15px;
+    margin: 0 15px;
     height: 111px;
     .banner__title{
       margin-left: 16px;
@@ -178,6 +301,7 @@ footer{
     }
   }
   footer{
+    margin-top: 19px;
     .footer__text{
       margin-top: 10px;
       display: block;
@@ -188,7 +312,7 @@ footer{
   }
   nav{
     align-items: center;
-    margin: 15px;
+    margin: 15px 15px 27px 15px;
     #navbar{
       a{
         font-size: 12px;
@@ -201,15 +325,23 @@ footer{
     }
   }
   .home__container{
+    gap: 22px;
     .cards__container{
       background-color: $white;
       padding: 0;
       margin: 0 15px;
+      gap: 20px;
+      .card{
+        height: 255px;
+      }
     }
+  }
+  .apropos__collapse__container{
+    margin: 15px 15px;
+    gap: 20px;
   }
   .collapse__container{
     margin: 15px;
-    gap: 20px;
   }
   .collapse{
     width: 100%;
@@ -222,12 +354,93 @@ footer{
         img{
           height: 15px;
         }
-
     }
     .collapse__description{
-      p{
+      div{
+        margin: 15px;
         font-size: 12px;
+        ul{
+          font-size: 12px;
+        }
       }
+    }
+  }
+  .hotel__container{
+    margin: 15px;
+    gap: 15px;
+    .carousel{
+      height: 255px;
+      .slider{
+        .previous-icon{
+          img{
+            margin: 6px;
+            height: 24px;
+          }
+        }
+        .next-icon{
+          img{
+            margin: 6px;
+            height: 24px;
+          }
+        }
+        .number{
+          display: none;
+        }
+      }
+    }
+    .hotel__description{
+      flex-direction: column;
+      .hotel__description--left{
+        .hotel__title{
+          font-size: 18px;
+        }
+        .hotel__location{
+          font-size: 14px;
+        }
+        .tags__container{
+          .tag{
+            width: 84px;
+            font-size: 10px;
+          }
+        }
+      }
+      .hotel__description--rigth{
+        margin-top: 16px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .name-picture{
+          order: 2;
+          .host--picture{
+            height: 32px;
+          }
+          .host--name{
+            font-size: 12px;
+          }
+        }
+        .ratings{
+          font-size: 15px;
+          width: 100px;
+        }
+      }
+    }
+    .hotel__collapse{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  .error__container{
+    margin-top: 113px;
+    gap: 113px;
+    .error__title{
+      font-size: 96px;
+    }
+    .error__description{
+      font-size: 18px;
+    }
+    a{
+      font-size: 14px;
     }
   }
 }

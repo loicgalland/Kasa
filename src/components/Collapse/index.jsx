@@ -16,7 +16,7 @@ export default function Collapse({title, description}){
                 </button>
             </div>
             <div className={`collapse__description ${isOpen ? 'collapse__description--open' : ''}`}>
-                <p>{description}</p>
+                <div>{description}</div>
             </div>
         </div>
     )
