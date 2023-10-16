@@ -2,9 +2,9 @@ import Banner from "../../components/Banner";
 import BannerImg from '../../assets/images/Banner/BannerImgApropos.png'
 import Collapse from "../../components/Collapse";
 import '../../utils/styles/style.css'
-export default function Propos(){
+export default function About(){
     return(
-        <div>
+        <div>r
             <Banner cover={BannerImg} title=""/>
             <div className="apropos__collapse__container">
                 <Collapse

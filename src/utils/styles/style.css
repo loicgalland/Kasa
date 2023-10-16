@@ -53,6 +53,7 @@ nav #navbar a.active {
 }
 .card .card__img {
   opacity: 0.7;
+  object-fit: cover;
   width: 340px;
   height: 340px;
 }
@@ -108,12 +109,11 @@ nav #navbar a.active {
 
 .collapse {
   max-width: 1025px;
-  background-color: #F6F6F6;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
 }
 .collapse .collapse__title {
+  z-index: 1;
   color: #fff;
   font-size: 24px;
   display: flex;
@@ -136,6 +136,10 @@ nav #navbar a.active {
   transform: rotate(-180deg);
 }
 .collapse .collapse__description {
+  background-color: #F6F6F6;
+  z-index: -1;
+  transform: translateY(-10px);
+  border-radius: 0 0 10px 10px;
   max-height: 0;
   line-height: 142%;
   overflow: hidden;
@@ -388,6 +392,7 @@ footer .footer__text {
   }
   .hotel__container .hotel__description .hotel__description--left .tags__container .tag {
     width: 84px;
+    height: 18px;
     font-size: 10px;
   }
   .hotel__container .hotel__description .hotel__description--rigth {
@@ -426,6 +431,22 @@ footer .footer__text {
   }
   .error__container a {
     font-size: 14px;
+  }
+}
+/* -- wrapper --*/
+@media screen and (max-width: 1400px) and (min-width: 1710px) {
+  body {
+    margin: 0 100px;
+  }
+}
+@media screen and (min-width: 1711px) and (max-width: 2000px) {
+  body {
+    margin: 0 150px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  body {
+    margin: 0 250px;
   }
 }
 

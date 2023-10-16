@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../../pages/Home";
-import Propos from "../../pages/Apropos";
+import About from "../../pages/About";
 import Hotel from "../../pages/Hotels";
 import Error from "../../pages/404";
 
@@ -10,9 +10,10 @@ function Rooter() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/apropos" element={<Propos />}/>
+        <Route path="/about" element={<About />}/>
         <Route path="/hotel/:idHotel" element={<Hotel />}/>
         <Route path="*" element={<Error />}/>
+          <Route path="/error" element={<Error />}/>
       </Routes>
     </div>
   );

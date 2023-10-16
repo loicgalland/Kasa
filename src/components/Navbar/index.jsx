@@ -11,11 +11,10 @@ export default function Navbar(){
             <ul id='navbar'>
                 <NavLink
                     to="/"
-                    className={({ isActive, isPending })=> isPending ? "pending" : isActive ? "active" : ""
+                    className={({ isActive})=> isActive ? "active" : ""
                     }
-                >Accueil
-                </NavLink>
-                <NavLink to="/apropos">À Propos</NavLink>
+                >Accueil</NavLink>
+                <NavLink to="/about">À Propos</NavLink>
             </ul>
 
         </nav>
