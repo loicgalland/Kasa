@@ -12,6 +12,7 @@ export default function Hotel() {
     const navigate = useNavigate();
     const idHotelSearch = idHotel.substring(1);
     const hotelSearch = hotels.find((hotel) => hotel.id === idHotelSearch);
+
     useEffect(() => {
         if (!hotelSearch) {
             //Redirection vers la page d'erreur si l'hotel n'est pas trouvé
@@ -37,7 +38,9 @@ export default function Hotel() {
 
     return (
         <div className="hotel__container">
-            <Carousel />
+            <Carousel
+                hotelSearch={ hotelSearch }
+            />
             <div className="hotel__description">
                 <HotelTitle
                     title={hotelSearch.title}

@@ -4,7 +4,7 @@ import Collapse from "../../components/Collapse";
 import '../../utils/styles/style.css'
 export default function About(){
     return(
-        <div>r
+        <div>
             <Banner cover={BannerImg} title=""/>
             <div className="apropos__collapse__container">
                 <Collapse
