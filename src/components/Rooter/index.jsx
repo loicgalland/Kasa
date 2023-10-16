@@ -13,7 +13,6 @@ function Rooter() {
         <Route path="/about" element={<About />}/>
         <Route path="/hotel/:idHotel" element={<Hotel />}/>
         <Route path="*" element={<Error />}/>
-          <Route path="/error" element={<Error />}/>
       </Routes>
     </div>
   );

@@ -15,7 +15,7 @@ export default function Hotel() {
     useEffect(() => {
         if (!hotelSearch) {
             //Redirection vers la page d'erreur si l'hotel n'est pas trouvé
-            navigate('/error')
+            navigate('*')
         }
     }, [hotelSearch]);
 
