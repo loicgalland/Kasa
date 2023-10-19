@@ -3,7 +3,10 @@ import {useState} from "react";
 import NavigationIcon from '../../assets/images/arrow_back_ios-24px 2.svg'
 
 export default function Collapse({title, description}){
+    //State pour savoir si la collapse est ouverte ou non
     const [isOpen, setIsOpen] = useState(false)
+
+    //fonction qui ouvre ou ferme la collapse
     const toggleCollapse = () => {
         setIsOpen(!isOpen)
     };

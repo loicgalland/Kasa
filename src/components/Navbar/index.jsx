@@ -9,6 +9,7 @@ export default function Navbar(){
                 <img src={Logo} alt="Kasa Logo" className="navbar__img"/>
             </Link>
             <ul id='navbar'>
+                <!-- Ajouter la class "active" au lien si il est actif-->
                 <NavLink
                     to="/"
                     className={({ isActive})=> isActive ? "active" : ""

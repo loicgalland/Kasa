@@ -1,4 +1,5 @@
 export default function Ratings({rating}){
+    //Ce composant affiche les étoiles en orange en fonction du chiffre de rating dans la BD
     return(
         <div className="ratings">
             <i className={`fa-solid fa-star ${rating > 0 ? 'fa-orange' : ''}`}></i>
