@@ -36,8 +36,6 @@ export default function Carousel({ hotelSearch }){
         }
         return(
             <div className="slider">
-                <!-- On s'arrure que l'objet hotel selectionné contient bien plus d'une image avant d'afficher la
-                 navigation du carousel -->
                 {slides?.length > 1 && (
                     <>
                         <div className="number">{currentIndex + 1}/{slides.length}</div>

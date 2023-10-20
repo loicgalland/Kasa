@@ -6,7 +6,7 @@ export default function HotelTitle({title, location, tags}){
             <h2 className="hotel__title">{title}</h2>
             <h3 className="hotel__location">{location}</h3>
             <div className="tags__container">
-                <!-- Map sur les tags pour créer autant de tags qu'il y en a dans la BD -->
+
                 {tags.map((tag) =>(
                     <Tag
                         key={tag}
